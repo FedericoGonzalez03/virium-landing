@@ -5,7 +5,13 @@ import { motion } from "framer-motion";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: {
+      duration: 1,
+    }
+  }
 };
 
 export default function Home() {
@@ -34,11 +40,15 @@ export default function Home() {
     ">
       <Head>
         <title>Virium - La Red Social del Futuro</title>
+        <meta name="description" content="Virium, la red social que prioriza la calidad del contenido y visibilidad justa." />
+        <meta property="og:title" content="Virium - La Red Social del Futuro" />
+        <meta property="og:description" content="Únete a una nueva experiencia social donde las ideas valen más que la fama." />
+        <meta property="og:image" content="/virium-preview.png" />
       </Head>
 
       {/* Sección 1: Introducción */}
       <section className="min-h-screen flex flex-col items-center justify-center text-center p-6 snap-start">
-        <h1 className="md:text-8xl text-7xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+        <h1 className="shadow-neon md:text-8xl text-7xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
           Virium
         </h1>
         <p className="mt-4 md:text-3xl text-2xl text-gray-300 md:w-6/10 w-9/10">
@@ -59,7 +69,7 @@ export default function Home() {
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }}
         variants={fadeInUp}
-        className="md:text-5xl text-3xl font-semibold text-pink-400"
+        className="shadow-neon-pink md:text-5xl text-3xl font-semibold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
       >
         ¿Qué es Virium?
       </motion.h2>
@@ -68,7 +78,7 @@ export default function Home() {
           whileInView="visible"
           viewport={{ once: false, amount: 0.2 }}
           variants={fadeInUp}
-          className="md:text-2xl text-xl mt-4 text-gray-300 md:w-6/10 w-9/10 text-left"
+          className="md:text-2xl text-xl mt-4 text-gray-300 md:w-6/10 w-full text-left"
         >
           Virium es una nueva red social que evita la superficialidad de otras plataformas. Aquí, las ideas se valoran por su impacto,
           no por la cantidad de seguidores. Sin clickbait, sin fake news, sin algoritmos injustos.
@@ -87,7 +97,7 @@ export default function Home() {
 
       {/* Sección 3: Características Clave */}
       <section className="min-h-screen flex flex-col items-center justify-center text-center p-6 snap-start">
-        <h2 className="md:text-5xl text-3xl font-semibold text-green-400">Características Clave</h2>
+        <h2 className="shadow-neon-green md:text-5xl text-3xl font-semibold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">Características Clave</h2>
         <ul className="md:text-2xl text-xl mt-4 text-gray-300 list-disc list-inside text-left">
           <li>📌 Visibilidad justa basada en la calidad del contenido.</li>
           <li className="mt-3">🚫 Sin likes ni métricas públicas para evitar validación superficial.</li>
@@ -104,12 +114,15 @@ export default function Home() {
       </section>
 
       <section className="min-h-screen flex flex-col items-center justify-center text-center p-6 snap-start">
-        <h2 className="md:text-5xl text-3xl font-semibold text-blue-400">Visibilidad e Impacto de tus Ideas</h2>
-        <p className="md:text-2xl text-xl mt-4 text-gray-300 text-left md:w-6/10 w-9/10">
-          En Virium, cada publicación tiene el potencial de ser vista por toda la comunidad, independientemente de la cantidad de seguidores que tengas. 
-          Nuestro algoritmo prioriza la calidad del contenido sobre la popularidad. Así, tus ideas pueden llegar lejos y tener un verdadero impacto, 
-          sin la necesidad de jugar con algoritmos ni depender de la fama de tu cuenta. Además, resaltamos publicaciones de calidad, desde ideas 
-          innovadoras hasta propuestas destacadas, para asegurarnos que no pasen por alto.
+        <h2 
+          className="shadow-neon-blue md:text-5xl text-3xl font-semibold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
+        >
+          Visibilidad e Impacto de tus Ideas
+        </h2>
+        <p className="md:text-2xl text-xl mt-4 text-gray-300 text-left md:w-6/10 w-full">
+          En Virium, cada publicación puede ser vista por toda la comunidad, sin importar tus seguidores. 
+          Nuestro algoritmo prioriza la calidad del contenido, permitiendo que tus ideas tengan un verdadero impacto. 
+          Resaltamos publicaciones de calidad para asegurarnos que no pasen por alto.
         </p>
         <button
           onClick={() => setIsModalOpen(true)}
@@ -121,7 +134,11 @@ export default function Home() {
 
       {/* Sección 4: Beneficios de Unirse */}
       <section className="min-h-screen flex flex-col items-center justify-center text-center p-6 snap-start">
-        <h2 className="md:text-5xl text-3xl font-semibold text-yellow-400">Beneficios de Unirse</h2>
+        <h2 
+          className="shadow-neon-yellow md:text-5xl text-3xl font-semibold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
+        >
+          Beneficios de Unirse
+        </h2>
         <p className="md:text-2xl text-xl mt-4 text-gray-300 md:w-6/10 w-9/10 text-left">
           Al ser parte de Virium, podrás compartir tus ideas sin preocuparte por la fama. Obtendrás visibilidad real,
           interacción significativa y una comunidad que valora el contenido auténtico.
@@ -144,7 +161,7 @@ export default function Home() {
             placeholder="Tu correo electrónico"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-neon-blue"
+            className="p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
             required
           />
           <button
@@ -160,7 +177,7 @@ export default function Home() {
       {/* Modal */}
       {isModalOpen && (
         <div className="fixed bg-black inset-0 flex items-center justify-center">
-          <div className=" p-6 bg-black rounded-lg text-center w-2/5 max-w-full min-w-75 shadow-2xl shadow-blue-400">
+          <div className=" p-6 bg-black rounded-lg text-center w-2/5 max-w-full min-w-75 shadow-neon">
             <h2 className="md:text-5xl text-3xl font-semibold text-blue-400">¡Únete a Virium!</h2>
             <p className="md:text-2xl text-xl text-gray-300 mt-2">Regístrate y sé de los primeros en probar Virium.</p>
             <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-4">
@@ -169,7 +186,7 @@ export default function Home() {
                 placeholder="Tu correo electrónico"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-neon-blue"
+                className="p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
                 required
               />
               <button

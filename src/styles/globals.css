@@ -37,10 +37,37 @@ body {
 }
 
 @keyframes neonGlowGreen {
-  0% { box-shadow: 0 0 5px #fff, 0 0 10px #0f0, 0 0 15px #0ff; }
-  50% { box-shadow: 0 0 10px #fff, 0 0 20px #0f0, 0 0 30px #0ff; }
-  100% { box-shadow: 0 0 5px #fff, 0 0 10px #0f0, 0 0 15px #0ff; }
+  0% { text-shadow: 0 0 5px #fff, 0 0 10px #0f0, 0 0 15px #0ff; }
+  50% { text-shadow: 0 0 10px #fff, 0 0 20px #0f0, 0 0 30px #0ff; }
+  100% { text-shadow: 0 0 5px #fff, 0 0 10px #0f0, 0 0 15px #0ff; }
 }
 .shadow-neon-green {
   animation: neonGlowGreen 1.5s infinite alternate;
+}
+
+@keyframes neonGlowPink {
+  0% { text-shadow: 0 0 5px #fff, 0 0 10px #f0f, 0 0 15px #f88; }
+  50% { text-shadow: 0 0 10px #fff, 0 0 20px #f0f, 0 0 30px #f88; }
+  100% { text-shadow: 0 0 5px #fff, 0 0 10px #f0f, 0 0 15px #f88; }
+}
+.shadow-neon-pink {
+  animation: neonGlowPink 1.5s infinite alternate;
+}
+
+@keyframes neonGlowBlue {
+  0% { text-shadow: 0 0 5px #fff, 0 0 10px #06f, 0 0 15px #0ff; }
+  50% { text-shadow: 0 0 10px #fff, 0 0 20px #06f, 0 0 30px #0ff; }
+  100% { text-shadow: 0 0 5px #fff, 0 0 10px #06f, 0 0 15px #0ff; }
+}
+.shadow-neon-blue {
+  animation: neonGlowBlue 1.5s infinite alternate;
+}
+
+@keyframes neonGlowYellow {
+  0% { text-shadow: 0 0 5px #fff, 0 0 10px #E28413, 0 0 15px #ff0; }
+  50% { text-shadow: 0 0 10px #fff, 0 0 20px #E28413, 0 0 30px #ff0; }
+  100% { text-shadow: 0 0 5px #fff, 0 0 10px #E28413, 0 0 15px #ff0; }
+}
+.shadow-neon-yellow {
+  animation: neonGlowYellow 1.5s infinite alternate;
 }
